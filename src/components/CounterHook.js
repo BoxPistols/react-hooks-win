@@ -22,10 +22,16 @@ function CounterHook() {
       setCount((prevCount) => prevCount + 1)
     }
   }
+  function Hello(props) {
+    return <h1>Hello{props.name}さん</h1>
+  }
 
   return (
     <>
       <h1>{count}</h1>
+
+      <Hello name="おれ" />
+
       <button onClick={incCount}> Add Hook </button>
       <button onClick={incCount10}> Add Hook </button>
       <button onClick={incCount10For}> Add Hook10 </button>
