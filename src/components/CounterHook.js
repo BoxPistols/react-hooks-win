@@ -6,14 +6,17 @@ function CounterHook() {
   // 関数
   const incCount = () => {
     // ステート関数（実行内容）
-    setCount(count + 1)
+    // setCount(count + 1)
+    setCount((countNum) => countNum + 1)
   }
 
   const incCount10 = () => {
+    // Bad Pattern
     setCount(count + 10)
   }
 
   const incCount10For = () => {
+    // 10回して10にする
     for (let index = 0; index < 10; index++) {
       // setCount(count + 1)
       setCount((prevCount) => prevCount + 1)
