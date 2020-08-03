@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+// TODO: has error
+// import PropTypes from "prop-types"
 
 function CounterHook() {
   // {　[配列 0:ステート, 1:ステートを更新する関数] }  useState(初期値)
@@ -25,7 +27,10 @@ function CounterHook() {
   function Hello(props) {
     return <h1>Hello{props.name}さん</h1>
   }
-
+  /* TODO: has error
+  Hello.propTypes = {
+    name: React.PropTypes.string,
+  }*/
   return (
     <>
       <h1>{count}</h1>
