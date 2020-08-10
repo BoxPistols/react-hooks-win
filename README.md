@@ -66,3 +66,17 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+---
+
+## API Test
+
+https://jsonplaceholder.typicode.com/
+https://github.com/typicode/json-server
+
+$ npm install -g json-server
+
+$ json-server --watch db.json --port 8888
+
+Open on Post Tool
+http://localhost:8888/posts
