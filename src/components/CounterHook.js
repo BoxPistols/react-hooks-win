@@ -32,7 +32,7 @@ function CounterHook() {
     name: React.PropTypes.string,
   }*/
   return (
-    <>
+    <div>
       <h1>{count}</h1>
 
       <Hello name="おれ" />
@@ -40,7 +40,7 @@ function CounterHook() {
       <button onClick={incCount}> Add Hook </button>
       <button onClick={incCount10}> Add Hook </button>
       <button onClick={incCount10For}> Add Hook10 </button>
-    </>
+    </div>
   )
 }
 export default CounterHook
