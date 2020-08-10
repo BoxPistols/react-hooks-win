@@ -24,8 +24,9 @@ class Form extends Component {
   }
   handleSubmit(event) {
     console.log("submit!")
-    alert(this.state.title + this.state.body)
+    // alert(this.state.title + this.state.body)
     event.preventDefault()
+    this.props.addPost(this.state.title, this.state.body)
   }
 
   render() {

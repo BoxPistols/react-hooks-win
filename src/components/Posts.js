@@ -11,6 +11,14 @@ class Posts extends Component {
     this.state = {
       posts: this.props.posts,
     }
+
+    this.add = this.add.bind(this)
+  }
+
+  add(title, body) {
+    console.log("Add call")
+    console.log("title:" + title)
+    console.log("body:" + body)
   }
 
   render() {
@@ -29,7 +37,7 @@ class Posts extends Component {
             </section>
           )
         })}
-        <Form />
+        <Form addPost={this.add} />
       </section>
     )
   }
