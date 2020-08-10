@@ -11,6 +11,7 @@ class Form extends Component {
 
     this.handleTitle = this.handleTitle.bind(this)
     this.handleBody = this.handleBody.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleTitle(event) {
@@ -21,11 +22,16 @@ class Form extends Component {
     console.log("body:", this.state.body)
     this.setState({ body: event.target.value })
   }
+  handleSubmit(event) {
+    console.log("submit!")
+    alert(this.state.title + this.state.body)
+    event.preventDefault()
+  }
 
   render() {
     return (
       <section>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div>
             <label>
               タイトル：
