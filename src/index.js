@@ -3,41 +3,10 @@ import ReactDOM from "react-dom"
 import "./index.css"
 // import App from "./App"
 import * as serviceWorker from "./serviceWorker"
+import Posts from "./components//Posts"
 
 // local path on moving postman
 const url = "http://localhost:8888/posts"
-
-// Post class Component
-class Posts extends React.Component {
-  // constructor
-  constructor(props) {
-    super(props)
-    // state
-    this.state = {
-      posts: this.props.posts,
-    }
-  }
-
-  render() {
-    return (
-      <section>
-        {/* in map posts obj include -> post, index */}
-        {this.state.posts.map((post, index) => {
-          return (
-            // set key
-            <section key={post.id}>
-              {/* set obj val */}
-              <h1>
-                {index + 1}: {post.title}
-              </h1>
-              <p>{post.body}</p>
-            </section>
-          )
-        })}
-      </section>
-    )
-  }
-}
 
 // get data from url
 fetch(url)
